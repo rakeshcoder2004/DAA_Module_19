@@ -1,5 +1,5 @@
 # EX 1D Linear search
-## DATE:26/04/2025
+## DATE:
 ## AIM:
 To Write a python program to implement linear search on the given tuple
 
