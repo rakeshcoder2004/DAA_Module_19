@@ -1,46 +1,58 @@
-# EX 1A Reverse a String
+# EX 1A Write a Python Program to print factorial of a number recursively.
+
+
 ## DATE:
 ## AIM:
-To Write a Program to Create a recursive function to reverse a string
+To write a program to create a factorial of a number recursively.
 
 ## Algorithm
-1. Take input string s.
-2. If length of s is 0 or 1, return s (base case).
-3. Otherwise, recursively call the function with s[1:].
-4. Append s[0] to the result of the recursive call.
-5. Return the final reversed string. 
+1. Input a number num from the user.
+
+2.Check if num is less than 0:
+
+ 2.1 If yes, print "Factorial is not defined for negative numbers."
+
+ 2.2 If no, proceed to step 4.
+
+3.Define a function factorial(n):
+
+ 3.1 If n is 0 or 1, return 1.
+
+ 3.2 Else, return n * factorial(n - 1) (i.e., call the function recursively).
+
+4.Call the factorial(num) function.
+
+5.Print the result as "Factorial of number {num} = {result}".
+   
 
 ## Program:
 ```
 /*
 Program to implement Reverse a String
-Developed by: Danish Nicho N
-Register Number: 212222040030
+Developed by: Rakesh V
+Register Number:  212222110036
 */
 ```
+
 ```
-
-def reverse_string(s):
-    """
-    Recursive function to reverse a string
-    """
-    if len(s) <= 1:  # base case: if the string is empty or has only one character, return it as is
-        return s
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
     else:
-        return reverse_string(s[1:]) + s[0]  
+        return n * factorial(n - 1)
 
-
-input_string = input()
-reversed_string = reverse_string(input_string)
-print(reversed_string) 
-
+# Taking user input
+num = int(input())
+if num < 0:
+    print("Factorial is not defined for negative numbers.")
+else:
+    print(f"Factorial of number {num} = {factorial(num)}")
 ```
 
 ## Output:
-![Screenshot 2025-04-26 101504](https://github.com/user-attachments/assets/7bac129d-03e6-4500-8171-c22addc6f7f2)
 
+![image](https://github.com/user-attachments/assets/51885238-0763-4a05-94c7-af8ecde129fd)
 
+# Result:
+The program successfully created a factorial of a number using recursion. When the user provides an input number, the output displays the factorial of the number.
 
-
-## Result:
-The program successfully reverses the input string using recursion. When the user provides an input string, the output displays the reversed version of the string
