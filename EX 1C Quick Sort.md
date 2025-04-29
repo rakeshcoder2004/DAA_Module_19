@@ -1,23 +1,24 @@
 # EX 1C Quick Sort
-## DATE:
-## AIM:
- To Write a python program to implement quick sort on the given values and print the sorted list and pivot value of each iteration
+
+To write a python program to implement quick sort using tha last element as pivot on the list of float values.
 
 ## Algorithm
 1. Select a pivot element from the array (commonly the first or last element).
-2. Partition the array into two subarrays: elements less than pivot and elements greater than or equal to pivot.
-3. Place the pivot between the two subarrays at its correct position.
-3. Recursively apply Quick Sort to the left subarray.
-4. Recursively apply Quick Sort to the right subarray. 
+2.Partition the array into two subarrays: elements less than pivot and elements greater than or equal to pivot.
+3.Place the pivot between the two subarrays at its correct position.
+4.Recursively apply Quick Sort to the left subarray.
+5.Recursively apply Quick Sort to the right subarray.
+   
 
 ## Program:
 ```
 /*
 Program to implement implement quick sort using the last element as pivot on the list of float values.
-Developed by: Danish Nicho N
-Register Number: 212222040030 
+Developed by: Rakesh V
+Register Number: 212222110036
 */
 ```
+
 ```
 def partition(array, low, high):
     pivot = array[low]
@@ -47,11 +48,11 @@ for i in range(n):
 print("Input List\n",arr1)
 quick_sort(arr1, 0, len(arr1)-1)
 print("Sorted List\n",arr1)
- ```
 
-## Output:
-![Screenshot 2025-04-26 103158](https://github.com/user-attachments/assets/146028cb-9f62-4172-8700-fb3ab7855311)
+```
 
+# Output:
+![Screenshot 2025-04-26 134839](https://github.com/user-attachments/assets/398c2fbf-0a5f-4d44-b139-734335e987f6)
 
 
 
