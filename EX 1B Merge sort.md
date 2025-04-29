@@ -1,75 +1,71 @@
 # EX 1B Merge Sort
 ## DATE:
 ## AIM:
-To Write a Program for Implementing merge sort using python recursion
+To write a python program to sort the first half of the list using merge sort.
 
 ## Algorithm
 1. If the array has more than one element, split it into two halves.
-2. Recursively apply merge sort on both halves.
-3. Compare elements of both halves and merge them into a sorted array.
-4. Copy any remaining elements from the left or right half.
-5. Return the fully sorted array.  
+2.Recursively apply merge sort on both halves.
+3.Compare elements of both halves and merge them into a sorted array.
+4.Copy any remaining elements from the left or right half.
+5.Return the fully sorted array.
+   
 
 ## Program:
 ```
 /*
 Program to implement Merge Sort
-Developed by: Danish Nicho N
-Register Number: 212222040030 
+Developed by: Rakesh V
+Register Number:  212222110036
 */
 ```
 
 ```
 def merge_sort(inp_arr):
-    size = len(inp_arr)
-    if size > 1:
-        middle = size // 2
-        left_arr = inp_arr[:middle]
-        right_arr = inp_arr[middle:]
- 
-        merge_sort(left_arr)
-        merge_sort(right_arr)
- 
-        p = 0
-        q = 0
-        r = 0
- 
-        left_size = len(left_arr)
-        right_size = len(right_arr)
-        while p < left_size and q < right_size:
-            if left_arr[p] < right_arr[q]:
-              inp_arr[r] = left_arr[p]
-              p += 1
+    if len(inp_arr) > 1:
+        mid = len(inp_arr) // 2  
+        left_half = inp_arr[:mid]  
+        right_half = inp_arr[mid:]  
+
+        merge_sort(left_half)  
+        merge_sort(right_half)  
+        i = j = k = 0  
+        while i < len(left_half) and j < len(right_half):
+            if left_half[i] < right_half[j]:
+                inp_arr[k] = left_half[i]
+                i += 1
             else:
-                inp_arr[r] = right_arr[q]
-                q += 1
-             
-            r += 1
- 
-        
-        while p < left_size:
-            inp_arr[r] = left_arr[p]
-            p += 1
-            r += 1
- 
-        while q < right_size:
-            inp_arr[r]=right_arr[q]
-            q += 1
-            r += 1
- 
-inp_arr=[]
-n=int(input())
-for i in range(0,n):
-    inp_arr.append(int(input()))
+                inp_arr[k] = right_half[j]
+                j += 1
+            k += 1
+
+        while i < len(left_half):
+            inp_arr[k] = left_half[i]
+            i += 1
+            k += 1
+
+        while j < len(right_half):
+            inp_arr[k] = right_half[j]
+            j += 1
+            k += 1
+
+inp_arr = []     
+n = int(input())  
+for i in range(n):
+    inp_arr.append(int(input()))  
+
 print("Input Array:\n")
 print(inp_arr)
-merge_sort(inp_arr)
+
+merge_sort(inp_arr)  
+
 print("Sorted Array:\n")
 print(inp_arr)
 ```
 
 ## Output:
-![Screenshot 2025-04-26 101850](https://github.com/user-attachments/assets/f83c9b4d-5876-4040-b28f-075a5d44c42d)
+
+![image](https://github.com/user-attachments/assets/f4fc51bc-aea9-41a5-83cd-2a3f0e746c2c)
 
 
 
